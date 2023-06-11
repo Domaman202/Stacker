@@ -14,9 +14,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(StewItem.class)
 public class StewItemMixin { //This mixin works for soups as well
-    @Inject(method = "finishUsing", at=@At(value = "NEW", target = "net/minecraft/item/ItemStack"), cancellable = true)
-    private void stackableStew(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir){
-        ItemsHelper.insertNewItem((PlayerEntity)user, new ItemStack(Items.BOWL));
-        cir.setReturnValue(stack);
-    }
+//    @Inject(method = "finishUsing", at=@At(value = "NEW", target = "net/minecraft/item/ItemStack"), cancellable = true)
+//    private void stackableStew(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir){
+//        ItemsHelper.insertNewItem((PlayerEntity)user, new ItemStack(Items.BOWL));
+//        cir.setReturnValue(stack);
+//    }
 }
